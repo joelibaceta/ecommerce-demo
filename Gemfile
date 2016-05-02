@@ -38,8 +38,10 @@ gem 'simple_form'
 #  Optional: I prefer use haml for views
 gem "haml-rails"          
 #  Optional: I prefer use active_admin to have a small functional admin panel
-gem 'activeadmin', github: 'activeadmin'    
+gem 'activeadmin', github: 'activeadmin'
 
+# Optional: Design for product index
+gem 'masonry-rails'
 
 group :development, :test do 
   gem 'byebug'
@@ -48,5 +50,6 @@ end
 group :development do 
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'quiet_assets'
 end
 

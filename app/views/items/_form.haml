@@ -1,9 +1,6 @@
-= simple_form_for(@item, html: { class: 'form-horizontal' }) do |f|
+= simple_form_for(@item, html: { class: 'form-inline', "data-toggle"=>"validator" }) do |f|
   = f.input :product_id, as: :hidden
   = f.input :cart_id, as: :hidden
-  = f.label "Cantidad:"
-  .input-group
-    .input-group-addon $
-    = f.input :quantity, label: false, placeholder: "0.00", input_html: {class: "text-align"}
-  %hr
-  = f.submit "Add to Cart", class: "btn btn-warning float-right"
+  = f.label "Quantity: "
+  = f.input :quantity, label: false, placeholder: "1", input_html: {class: "text-align", type: "number"}, value: "1"
+  = f.submit "Buy", class: "btn btn-warning float-right"
