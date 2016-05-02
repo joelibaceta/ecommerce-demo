@@ -14,7 +14,7 @@
         %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
           Select Category
           %span.caret
-        %ul.dropdown-menu 
+        %ul.dropdown-menu
           %li
             %a{:href => "/"} All
           - Category.all.each do |category|
@@ -22,12 +22,7 @@
               %a{:href => "/products?category=#{category.id}"}= category.name
     %form.navbar-form.navbar-left{:role => "search"}
       .form-group
-<<<<<<< HEAD
-        %input.form-control{:placeholder => "Search", :type => "text"}
-=======
-        %input.form-control{:placeholder => "Search", :type => "text"}/
-      %button.btn.btn-default{:type => "submit"} Submit
->>>>>>> f4667346d4ad90a1aa13a01b52d6a8b712e5de31
+        %input.form-control{:placeholder => "Search", :type => "text"} 
     %ul.nav.navbar-nav.navbar-right
       - if (!current_user)
         %li
