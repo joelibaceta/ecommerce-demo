@@ -17,7 +17,18 @@
 //= require meli-toolbox
 //= require mango-toolbox
 //= require stripe-toolbox
+//= require validator
 //= require card
+
+//= require masonry/jquery.masonry
+//= require masonry/jquery.event-drag
+//= require masonry/jquery.imagesloaded.min
+//= require masonry/jquery.infinitescroll.min
+//= require masonry/modernizr-transitions
+//= require masonry/box-maker
+//= require masonry/jquery.loremimages.min
+//= require isotope/jquery.isotope
+
 //= require_tree .
 
 
