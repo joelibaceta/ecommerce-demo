@@ -12,6 +12,8 @@
             =image_tag("mango-logo-black")
           %a{href: payment_form_gateway_sales_path(payment_provider: "stripe")}
             =image_tag("stripe-logo", width: "100px")
+          %a{href: payment_form_gateway_sales_path(payment_provider: "mp_b")}
+            =image_tag("mercadopago_black.png", width: "160px")
         %br
         %small El proceso podria estar sujeto a las restricciones y/o comisiones de cada proveedor de pago.
       .col-md-2

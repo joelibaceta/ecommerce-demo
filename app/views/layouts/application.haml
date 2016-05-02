@@ -15,20 +15,21 @@
  
   %body
     = render partial: "layouts/shared/header"
-    .container-fluid
-      .row
-        .col-lg-9
-          %br
-          = yield
-        .col-lg-3
 
-          - if current_user
+
+    - if current_user
+      .container-fluid
+        .row
+          .col-lg-9.ecommerce-container
+            = yield
+          .col-lg-3.ecommerce-container
             .panel.panel-default
               .panel-heading
+                %span.glyphicon.glyphicon-shopping-cart
                 %b Shopping Cart
               .panel-body
                 %ul.nav.nav-list
-                  %table(class="table table-bordered table-striped")
+                  %table.table.table-bordered.cart
                     %thead
                       %tr
                         %th #
@@ -47,11 +48,18 @@
                       %td.text-align(colspan="2")
                         %b Total:
                       %td.text-align= number_to_currency(Cart.get_current_cart(current_user).total.to_f, unit: "$")
-                .panel-footer.text-align
-                  %a{href: new_gateway_sale_path(cart_id=Cart.get_current_cart(current_user).id), class: "btn btn-warning"}
+                .panel-footer
+                  %a{href: new_gateway_sale_path(cart_id=Cart.get_current_cart(current_user).id), class: "btn btn-success btn-xs"}
                     %span.glyphicon.glyphicon-credit-card
                     Checkout
-                  %a{href: "#", class: "btn btn-danger"}
+                  %a{href: "#", class: "btn btn-danger btn-xs"}
                     %span.glyphicon.glyphicon-trash
                     Clean
+    - else
+      .container-fluid
+        .row
+          .col-lg-1
+          .col-lg-10.ecommerce-container
+            = yield
+          .col-lg-1
 
