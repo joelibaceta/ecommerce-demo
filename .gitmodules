@@ -7,3 +7,6 @@
 [submodule "vendor/mango-ruby"]
 	path = vendor/mango-ruby
 	url = https://github.com/joelibaceta/mango-ruby.git
+[submodule "lib/mp-sdk-ruby"]
+	path = lib/mp-sdk-ruby
+	url = https://github.com/joelibaceta/mp-sdk-ruby.git
