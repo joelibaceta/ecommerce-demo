@@ -22,7 +22,7 @@
               %a{:href => "/products?category=#{category.id}"}= category.name
     %form.navbar-form.navbar-left{:role => "search"}
       .form-group
-        %input.form-control{:placeholder => "Search", :type => "text"} 
+        %input.form-control{:placeholder => "Search", :type => "text"}
     %ul.nav.navbar-nav.navbar-right
       - if (!current_user)
         %li
