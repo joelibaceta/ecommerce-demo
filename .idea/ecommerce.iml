@@ -167,6 +167,7 @@
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v4.2.6, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arbre (v1.0.3, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v6.0.3, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ast (v2.2.0, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="autoprefixer-rails (v6.3.6, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.11, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="binding_of_caller (v0.7.2, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
@@ -213,7 +214,9 @@
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.6.7.2, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="orm_adapter (v0.5.0, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="paperclip (v4.3.6, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="parser (v2.3.1.0, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="polyamorous (v1.3.0, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="powerpack (v0.1.1, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="quiet_assets (v1.1.0, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.6.4, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.3, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
@@ -222,11 +225,14 @@
     <orderEntry type="library" scope="PROVIDED" name="rails-dom-testing (v1.0.7, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-html-sanitizer (v1.0.3, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v4.2.6, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rainbow (v2.1.0, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v11.1.2, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ransack (v1.7.0, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v4.2.2, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="responders (v2.1.2, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rest-client (v1.8.0, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rubocop (v0.39.0, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ruby-progressbar (v1.8.0, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ruby_parser (v3.8.1, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.4.22, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v5.0.4, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
@@ -246,6 +252,7 @@
     <orderEntry type="library" scope="PROVIDED" name="uglifier (v3.0.0, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="unf (v0.1.4, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="unf_ext (v0.0.7.2, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="unicode-display_width (v1.0.3, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="warden (v1.2.6, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="web-console (v2.3.0, RVM: ruby-2.2.3 [meli-ruby]) [gem]" level="application" />
   </component>

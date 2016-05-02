@@ -3,6 +3,7 @@ Master  /   Develop
 
 [![Build Status](https://travis-ci.org/joelibaceta/ecommerce-demo.svg?branch=master)](https://travis-ci.org/joelibaceta/ecommerce-demo) [![Build Status](https://travis-ci.org/joelibaceta/ecommerce-demo.svg?branch=develop)](https://travis-ci.org/joelibaceta/ecommerce-demo)
 
+
 **Index**
 - Setup
 - Payment Ways
@@ -22,4 +23,4 @@ rails s
 
 * Mercado Pago
 * Mango
-* Stripe 
+* Stripe
