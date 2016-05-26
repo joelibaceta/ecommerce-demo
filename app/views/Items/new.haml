@@ -1,0 +1,11 @@
+.container-fluid
+  .row.show-product
+    %h1.title-detail= @item.product.name
+    %hr
+    .col-md-6= image_tag(@item.product.picture, width: "100%")
+    .col-md-1
+    .col-md-5
+      %p.body-detail #{@item.product.description}
+      %hr
+      .form-container
+        = render partial: 'form'

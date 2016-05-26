@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(version: 20160502181517) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "Preferences", force: :cascade do |t|
+  create_table "items", force: :cascade do |t|
     t.integer  "cart_id"
     t.integer  "product_id"
     t.integer  "quantity"

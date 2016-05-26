@@ -40,7 +40,7 @@
                         %tr
                           %td #{item.quantity.to_i}
                           %td=link_to("#{item.product.name}", item.product)
-                          %td.text-align #{number_to_currency((item.quantity * item.product.price), unit: "$")}
+                          %td.text-align #{number_to_currency((item.quantity.to_f * item.product.price.to_f), unit: "$")}
                           %td
                             %a{href: item_path(item)}(data-method="delete")
                               %span.glyphicon.glyphicon-remove

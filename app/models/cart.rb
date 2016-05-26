@@ -1,7 +1,7 @@
 class Cart < ActiveRecord::Base
 
 
-  has_many :preferences
+  has_many :items
   belongs_to :user
   belongs_to :sale
 
@@ -12,7 +12,7 @@ class Cart < ActiveRecord::Base
   end
 
   def total
-    self.items.map{|i| i.product.price * i.quantity}.reduce(:+)
+    self.items.map{|i| i.product.price.to_f * i.quantity.to_f}.reduce(:+)
   end
 
 end
