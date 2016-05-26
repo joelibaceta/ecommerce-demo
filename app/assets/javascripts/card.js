@@ -130,7 +130,7 @@
      * is.type
      * Test if `value` is a type of `type`.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @param {String} type type
      * @return {Boolean} true if `value` is a type of `type`, false otherwise
      * @api public
@@ -144,7 +144,7 @@
      * is.defined
      * Test if `value` is defined.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if 'value' is defined, false otherwise
      * @api public
      */
@@ -157,7 +157,7 @@
      * is.empty
      * Test if `value` is empty.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if `value` is empty, false otherwise
      * @api public
      */
@@ -184,7 +184,7 @@
      * is.equal
      * Test if `value` is equal to `other`.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @param {Mixed} other value to compare with
      * @return {Boolean} true if `value` is equal to `other`, false otherwise
      */
@@ -243,8 +243,8 @@
      * is.hosted
      * Test if `value` is hosted by `host`.
      *
-     * @param {Mixed} value to test
-     * @param {Mixed} host host to test with
+     * @param {Mixed} value to spec
+     * @param {Mixed} host host to spec with
      * @return {Boolean} true if `value` is hosted by `host`, false otherwise
      * @api public
      */
@@ -258,7 +258,7 @@
      * is.instance
      * Test if `value` is an instance of `constructor`.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if `value` is an instance of `constructor`
      * @api public
      */
@@ -271,7 +271,7 @@
      * is.nil / is.null
      * Test if `value` is null.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if `value` is null, false otherwise
      * @api public
      */
@@ -284,7 +284,7 @@
      * is.undef / is.undefined
      * Test if `value` is undefined.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if `value` is undefined, false otherwise
      * @api public
      */
@@ -301,7 +301,7 @@
      * is.args
      * Test if `value` is an arguments object.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if `value` is an arguments object, false otherwise
      * @api public
      */
@@ -320,7 +320,7 @@
      * is.array
      * Test if 'value' is an array.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if `value` is an array, false otherwise
      * @api public
      */
@@ -333,7 +333,7 @@
      * is.arguments.empty
      * Test if `value` is an empty arguments object.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if `value` is an empty arguments object, false otherwise
      * @api public
      */
@@ -345,7 +345,7 @@
      * is.array.empty
      * Test if `value` is an empty array.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if `value` is an empty array, false otherwise
      * @api public
      */
@@ -357,7 +357,7 @@
      * is.arraylike
      * Test if `value` is an arraylike object.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if `value` is an arguments object, false otherwise
      * @api public
      */
@@ -378,7 +378,7 @@
      * is.bool
      * Test if `value` is a boolean.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if `value` is a boolean, false otherwise
      * @api public
      */
@@ -391,7 +391,7 @@
      * is.false
      * Test if `value` is false.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if `value` is false, false otherwise
      * @api public
      */
@@ -404,7 +404,7 @@
      * is.true
      * Test if `value` is true.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if `value` is true, false otherwise
      * @api public
      */
@@ -421,7 +421,7 @@
      * is.date
      * Test if `value` is a date.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if `value` is a date, false otherwise
      * @api public
      */
@@ -438,7 +438,7 @@
      * is.element
      * Test if `value` is an html element.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if `value` is an HTML Element, false otherwise
      * @api public
      */
@@ -458,7 +458,7 @@
      * is.error
      * Test if `value` is an error object.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if `value` is an error object, false otherwise
      * @api public
      */
@@ -475,7 +475,7 @@
      * is.fn / is.function (deprecated)
      * Test if `value` is a function.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if `value` is a function, false otherwise
      * @api public
      */
@@ -493,7 +493,7 @@
      * is.number
      * Test if `value` is a number.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if `value` is a number, false otherwise
      * @api public
      */
@@ -506,7 +506,7 @@
      * is.infinite
      * Test if `value` is positive or negative infinity.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if `value` is positive or negative Infinity, false otherwise
      * @api public
      */
@@ -518,7 +518,7 @@
      * is.decimal
      * Test if `value` is a decimal number.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if `value` is a decimal number, false otherwise
      * @api public
      */
@@ -531,7 +531,7 @@
      * is.divisibleBy
      * Test if `value` is divisible by `n`.
      *
-     * @param {Number} value value to test
+     * @param {Number} value value to spec
      * @param {Number} n dividend
      * @return {Boolean} true if `value` is divisible by `n`, false otherwise
      * @api public
@@ -548,7 +548,7 @@
      * is.integer
      * Test if `value` is an integer.
      *
-     * @param value to test
+     * @param value to spec
      * @return {Boolean} true if `value` is an integer, false otherwise
      * @api public
      */
@@ -561,7 +561,7 @@
      * is.maximum
      * Test if `value` is greater than 'others' values.
      *
-     * @param {Number} value value to test
+     * @param {Number} value value to spec
      * @param {Array} others values to compare with
      * @return {Boolean} true if `value` is greater than `others` values
      * @api public
@@ -588,7 +588,7 @@
      * is.minimum
      * Test if `value` is less than `others` values.
      *
-     * @param {Number} value value to test
+     * @param {Number} value value to spec
      * @param {Array} others values to compare with
      * @return {Boolean} true if `value` is less than `others` values
      * @api public
@@ -615,7 +615,7 @@
      * is.nan
      * Test if `value` is not a number.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if `value` is not a number, false otherwise
      * @api public
      */
@@ -628,7 +628,7 @@
      * is.even
      * Test if `value` is an even number.
      *
-     * @param {Number} value value to test
+     * @param {Number} value value to spec
      * @return {Boolean} true if `value` is an even number, false otherwise
      * @api public
      */
@@ -641,7 +641,7 @@
      * is.odd
      * Test if `value` is an odd number.
      *
-     * @param {Number} value value to test
+     * @param {Number} value value to spec
      * @return {Boolean} true if `value` is an odd number, false otherwise
      * @api public
      */
@@ -654,7 +654,7 @@
      * is.ge
      * Test if `value` is greater than or equal to `other`.
      *
-     * @param {Number} value value to test
+     * @param {Number} value value to spec
      * @param {Number} other value to compare with
      * @return {Boolean}
      * @api public
@@ -671,7 +671,7 @@
      * is.gt
      * Test if `value` is greater than `other`.
      *
-     * @param {Number} value value to test
+     * @param {Number} value value to spec
      * @param {Number} other value to compare with
      * @return {Boolean}
      * @api public
@@ -688,7 +688,7 @@
      * is.le
      * Test if `value` is less than or equal to `other`.
      *
-     * @param {Number} value value to test
+     * @param {Number} value value to spec
      * @param {Number} other value to compare with
      * @return {Boolean} if 'value' is less than or equal to 'other'
      * @api public
@@ -705,7 +705,7 @@
      * is.lt
      * Test if `value` is less than `other`.
      *
-     * @param {Number} value value to test
+     * @param {Number} value value to spec
      * @param {Number} other value to compare with
      * @return {Boolean} if `value` is less than `other`
      * @api public
@@ -722,7 +722,7 @@
      * is.within
      * Test if `value` is within `start` and `finish`.
      *
-     * @param {Number} value value to test
+     * @param {Number} value value to spec
      * @param {Number} start lower bound
      * @param {Number} finish upper bound
      * @return {Boolean} true if 'value' is is within 'start' and 'finish'
@@ -746,7 +746,7 @@
      * is.object
      * Test if `value` is an object.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if `value` is an object, false otherwise
      * @api public
      */
@@ -759,7 +759,7 @@
      * is.hash
      * Test if `value` is a hash - a plain object literal.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if `value` is a hash, false otherwise
      * @api public
      */
@@ -776,7 +776,7 @@
      * is.regexp
      * Test if `value` is a regular expression.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if `value` is a regexp, false otherwise
      * @api public
      */
@@ -793,7 +793,7 @@
      * is.string
      * Test if `value` is a string.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if 'value' is a string, false otherwise
      * @api public
      */
@@ -810,7 +810,7 @@
      * is.base64
      * Test if `value` is a valid base64 encoded string.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if 'value' is a base64 encoded string, false otherwise
      * @api public
      */
@@ -827,7 +827,7 @@
      * is.hex
      * Test if `value` is a valid hex encoded string.
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if 'value' is a hex encoded string, false otherwise
      * @api public
      */
@@ -840,7 +840,7 @@
      * is.symbol
      * Test if `value` is an ES6 Symbol
      *
-     * @param {Mixed} value value to test
+     * @param {Mixed} value value to spec
      * @return {Boolean} true if `value` is a Symbol, false otherise
      * @api public
      */

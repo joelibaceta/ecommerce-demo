@@ -89,11 +89,11 @@ SimpleForm.setup do |config|
   # You can define the class to use on all collection wrappers. Defaulting to none.
   # config.collection_wrapper_class = nil
 
-  # You can wrap each item in a collection of radio/check boxes with a tag,
+  # You can wrap each preference in a collection of radio/check boxes with a tag,
   # defaulting to :span.
   # config.item_wrapper_tag = :span
 
-  # You can define a class to use in all item wrappers. Defaulting to none.
+  # You can define a class to use in all preference wrappers. Defaulting to none.
   # config.item_wrapper_class = nil
 
   # How the label text should be generated altogether with the required text.

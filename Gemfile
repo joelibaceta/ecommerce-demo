@@ -34,7 +34,6 @@ gem 'mango-ruby', path: 'vendor/mango-ruby'
 gem 'mercadopago-sdk', '~> 0.3.4' , path: 'vendor/sdk-ruby'
 gem 'stripe', path: 'vendor/stripe-ruby'
 
-
 #  Optional: I prefer use simple_form to simplify the views
 gem 'simple_form'         
 #  Optional: I prefer use haml for views

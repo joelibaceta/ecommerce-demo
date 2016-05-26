@@ -1,7 +1,7 @@
 class Cart < ActiveRecord::Base
 
 
-  has_many :items
+  has_many :preferences
   belongs_to :user
   belongs_to :sale
 
