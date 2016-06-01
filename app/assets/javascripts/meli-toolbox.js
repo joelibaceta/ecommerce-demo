@@ -1,5 +1,27 @@
 Mercadopago.setPublishableKey("TEST-98638d24-eb00-4dd5-82d8-4e573fac6a80");
 
+var newCardForm = function(formSelector) {
+    var formSelector = formSelector;
+    var doSubmit = false;
+    var getCurrentForm = function(){ return document.querySelector(formSelector) };
+
+    var getInputFromDataCheckoutAttr = function(dataCheckout){
+        form = getCurrentForm();
+        return form.querySelector('input[data-checkout="' + dataCheckout + '"]');
+    };
+
+    var getInputFromID = function(id){
+        form = getCurrentForm();
+        return form.querySelector('#' + id);
+    };
+
+    var getCurrentFormAsHash = {
+        cardNumber: getInputFromDataCheckoutAttr('cardNumber')
+    };
+
+
+
+}
 
 var paymentForm = function(formSelector){
 
@@ -72,6 +94,11 @@ var paymentForm = function(formSelector){
                 var paymentMethod = document.createElement('input');
                 paymentMethod.setAttribute('name', "paymentMethodId");
                 paymentMethod.setAttribute('data-checkout', "paymentMethodId");
+                paymentMethod.setAttribute('type', "hidden");
+                paymentMethod.setAttribute('value', response[0].id);
+                form.appendChild(paymentMethod);
+                var payment_method = document.createElement('input');
+                paymentMethod.setAttribute('name', "payment_method_id");
                 paymentMethod.setAttribute('type', "hidden");
                 paymentMethod.setAttribute('value', response[0].id);
                 form.appendChild(paymentMethod);

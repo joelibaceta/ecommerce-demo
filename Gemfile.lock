@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/activeadmin/activeadmin.git
-  revision: d84f8190edac8c28f942cd4b6c3e16086da9d7a2
+  revision: b8123d60187f2895582814d8a6baae71ddcc1fe1
   specs:
     activeadmin (1.0.0.pre2)
       arbre (~> 1.0, >= 1.0.2)
@@ -16,6 +16,22 @@ GIT
       ransack (~> 1.3)
       sass-rails
       sprockets (< 4)
+
+GIT
+  remote: git://github.com/joelibaceta/active_admin_editor.git
+  revision: bd21c6ab467e9ae270c6213b414895a805510b97
+  specs:
+    active_admin_editor (1.1.0)
+      activeadmin (>= 0.4.0)
+      ejs
+      rails (>= 3.0.0)
+
+PATH
+  remote: vendor/browserlog
+  specs:
+    browserlog (0.0.2)
+      jquery-rails (>= 3)
+      rails (>= 3.2.18)
 
 PATH
   remote: vendor/mango-ruby
@@ -77,7 +93,7 @@ GEM
       activesupport (>= 3.0.0)
     arel (6.0.3)
     ast (2.2.0)
-    autoprefixer-rails (6.3.6)
+    autoprefixer-rails (6.3.6.1)
       execjs
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
@@ -89,7 +105,7 @@ GEM
       sass (~> 3.4)
       thor (~> 0.19)
     builder (3.2.2)
-    byebug (8.2.4)
+    byebug (9.0.4)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.8)
@@ -101,9 +117,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
-    concurrent-ruby (1.0.1)
+    concurrent-ruby (1.0.2)
     debug_inspector (0.0.2)
-    devise (4.0.1)
+    devise (4.1.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 4.1.0, < 5.1)
@@ -111,8 +127,9 @@ GEM
       warden (~> 1.2.3)
     domain_name (0.5.20160310)
       unf (>= 0.0.5, < 1.0.0)
+    ejs (1.1.1)
     erubis (2.7.0)
-    execjs (2.6.0)
+    execjs (2.7.0)
     formtastic (3.1.4)
       actionpack (>= 3.2.13)
     formtastic_i18n (0.6.0)
@@ -145,9 +162,8 @@ GEM
     jbuilder (2.4.1)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
-    jquery-rails (4.1.1)
-      rails-dom-testing (>= 1, < 3)
-      railties (>= 4.2.0)
+    jquery-rails (3.1.4)
+      railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (5.0.5)
       railties (>= 3.2.16)
@@ -159,13 +175,11 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
-    masonry-rails (0.2.4)
-      railties
-    mime-types (2.99.1)
+    mime-types (2.99.2)
     mimemagic (0.3.0)
     mini_portile2 (2.0.0)
-    minitest (5.8.4)
-    multi_json (1.11.3)
+    minitest (5.9.0)
+    multi_json (1.12.1)
     netrc (0.11.0)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
@@ -220,20 +234,20 @@ GEM
       polyamorous (~> 1.2)
     rdoc (4.2.2)
       json (~> 1.4)
-    responders (2.1.2)
+    responders (2.2.0)
       railties (>= 4.2.0, < 5.1)
     rest-client (1.8.0)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
-    rubocop (0.39.0)
-      parser (>= 2.3.0.7, < 3.0)
+    rubocop (0.40.0)
+      parser (>= 2.3.1.0, < 3.0)
       powerpack (~> 0.1)
       rainbow (>= 1.99.1, < 3.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
-    ruby-progressbar (1.8.0)
-    ruby_parser (3.8.1)
+    ruby-progressbar (1.8.1)
+    ruby_parser (3.8.2)
       sexp_processor (~> 4.1)
     sass (3.4.22)
     sass-rails (5.0.4)
@@ -261,7 +275,7 @@ GEM
     state_machine (1.2.0)
     thor (0.19.1)
     thread_safe (0.3.5)
-    tilt (2.0.2)
+    tilt (2.0.4)
     turbolinks (2.5.3)
       coffee-rails
     tzinfo (1.2.2)
@@ -271,7 +285,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.2)
-    unicode-display_width (1.0.3)
+    unicode-display_width (1.0.5)
     warden (1.2.6)
       rack (>= 1.0)
     web-console (2.3.0)
@@ -284,16 +298,18 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_admin_editor!
   activeadmin!
   bootstrap-sass
+  browserlog!
   byebug
   coffee-rails (~> 4.1.0)
   devise
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari
   mango-ruby!
-  masonry-rails
   mercadopago-sdk (~> 0.3.4)!
   paperclip
   quiet_assets
@@ -311,4 +327,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.11.2
+   1.12.4

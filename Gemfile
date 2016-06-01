@@ -27,6 +27,7 @@ gem 'state_machine'
 gem 'devise'
 
 gem 'rubocop'
+gem 'browserlog', path: 'vendor/browserlog'
 
 # Payment Providers
 
@@ -40,9 +41,10 @@ gem 'simple_form'
 gem "haml-rails"          
 #  Optional: I prefer use active_admin to have a small functional admin panel
 gem 'activeadmin', github: 'activeadmin'
+gem 'active_admin_editor', github: 'joelibaceta/active_admin_editor'
 
 # Optional: Design for product index
-gem 'masonry-rails'
+gem 'kaminari'
 
 group :development, :test do 
   gem 'byebug'

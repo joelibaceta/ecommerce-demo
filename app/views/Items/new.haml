@@ -1,11 +1,42 @@
 .container-fluid
   .row.show-product
     %h1.title-detail= @item.product.name
+    %h4.sub-detail=@item.product.subtitle
     %hr
-    .col-md-6= image_tag(@item.product.picture, width: "100%")
-    .col-md-1
-    .col-md-5
-      %p.body-detail #{@item.product.description}
+    .col-md-6
+      .image-main
+        - if @item.product.gallery
+          - @item.product.gallery.photos.each do |photo|
+            .image-main-item{style: "background-image: url('#{photo.picture.url}');"}
+        .image-main-item{style: "background-image: url('#{@item.product.picture.url}');"}
+      %hr
+      .image-thumb
+        - if @item.product.gallery
+          - @item.product.gallery.photos.each do |photo|
+            .image-thumb-item{style: "background-image: url('#{photo.picture.url}');"}
+        .image-thumb-item{style: "background-image: url('#{@item.product.picture.url}');"}
+
+    .col-md-6
+      %h4 El Producto
+      .body-detail
+        #{@item.product.description.html_safe}
       %hr
       .form-container
         = render partial: 'form'
+
+:javascript
+  $('.image-main').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.image-thumb'
+  });
+  $('.image-thumb').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.image-main',
+    dots: true,
+    centerMode: true,
+    focusOnSelect: true
+  });
