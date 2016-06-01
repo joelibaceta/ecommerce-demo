@@ -1,0 +1,19 @@
+- @products.each do |item|
+  .grid-item.col-md-4
+    .thumbnail
+      .pic-thumb{style: "background-image: url('#{item.picture.url}')"}
+        - if has_new_ribbon?(item.id)
+          .ribbon
+            %span NEW
+      .caption
+        %h4= "#{item.name}"
+        %p.description= item.brief #truncate preference.description, length: 200
+        .container-fluid.caption-bottom
+          .row
+            .col-md-6
+              %h4=  number_to_currency(item.price, unit: "$")
+              %small="#{times_buyed(item.id)} Times buyed"
+            .col-md-6
+              %a{href: new_item_path(product_id: item.id), class: "btn btn-warning btn-xs mt-21"}
+                %span.glyphicon.glyphicon-shopping-cart
+                Add to Cart

@@ -1,29 +1,66 @@
-#masonry-container.container-fluid.transitions-enabled.clearfix.centered
-  - @products.each do |item|
-    .box.col3
-      .thumbnail
-        .pic-thumb{style: "background-image: url('#{item.picture.url}')"}
-          - if has_new_ribbon?(item.id)
-            .ribbon
-              %span NEW
-        .caption
-          %h4= "#{item.name}"
-          %small= item.description #truncate preference.description, length: 200
-          .container-fluid.caption-bottom
-            .row
-              .col-md-6
-                %h4=  number_to_currency(item.price, unit: "$")
-                %small="#{times_buyed(item.id)} Times buyed"
-              .col-md-6
-                %a{href: new_item_path(product_id: item.id), class: "btn btn-warning btn-xs mt-21"}
-                  %span.glyphicon.glyphicon-shopping-cart
-                  Add to Cart
+-#.row
+-#  .col-md-12
+-#    .carousel
+-#      .header-item{style: "background-image: url('/assets/header1.jpg');"}
+-#      .header-item{style: "background-image: url('/assets/header2.png');"}
+#masonry-container
+  = render partial: 'grid'
 
 :javascript
+
+  var actual_page = 2
+  var pages_visited = []
+
+
   $(function(){
-    $('#masonry-container').masonry({
-      itemSelector: '.box',
-      columnWidth: 60,
-      gutterWidth: 40
+    $('#masonry-container').masonry(
+    );
+
+    $(document).scroll(function(){
+      var currY = $(this).scrollTop();
+      var postHeight = $(this).height();
+      var scrollHeight = window.innerHeight;
+      var scrollPercent = (currY / (postHeight-scrollHeight)) * 100;
+
+      if (scrollPercent > 90){
+
+        if (pages_visited.indexOf(actual_page) == -1 ) {
+
+          console.log(pages_visited);
+
+          $.get('/products?page=' + actual_page, function(data) {
+
+
+
+          virtual_div = document.createElement('div');
+          $(virtual_div).html(data);
+
+          console.log(virtual_div);
+
+          elements = $(virtual_div).find(".grid-item");
+
+          $(elements).each(function(el){
+            $el = $(this);
+            $('#masonry-container').append($el).masonry('appended', $el);
+          });
+          actual_page = actual_page + 1
+
+
+        });
+
+        }
+        pages_visited.push(actual_page)
+      }
+
+
     });
+
   });
+
+  $('.carousel').slick({
+    slidesToShow: 1,
+    infinite: true,
+  });
+
+
+

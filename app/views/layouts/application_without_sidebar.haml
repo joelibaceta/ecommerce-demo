@@ -14,9 +14,20 @@
 
   %body
     = render partial: "layouts/shared/header"
+    .debug-panel.closed
+      %h5 MercadoPago Objects Inspector
+      .debub-body
+        %ul.tree
+          = MercadoPago.get_objects.html_safe
+      .debug-console
+        %iframe(src="http://localhost:3000/logs/development")
     .container-fluid
       .row
         .col-lg-12
           %br
           = yield
 
+:javascript
+  $(".debug-panel").on("dblclick", function(){
+    $(".debug-panel").toggleClass("closed");
+  });

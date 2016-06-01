@@ -6,7 +6,7 @@
 = simple_form_for([:gateway, @sale], html: { class: 'form-horizontal' }) do |f|
 
 
-  %input{:name => "kindOfOperation", :type => "hidden", :value => "card"}
+  %input{:name => "operation_type", :type => "hidden", :value => "regular_payment"}
   %fieldset
     %br
     .form-group
@@ -23,7 +23,7 @@
           %option(value="0") Otra tarjeta
     %hr.custom
     .form-group
-      %input#amount.form-control{:name => "amount", :type => "hidden", :value => @sale.cart.total}/
+      %input#amount.form-control{:name => "transaction_amount", :type => "hidden", :value => @sale.cart.total}/
 
     .form-group.custom
       %label.col-sm-3.control-label{:for => "cardNumber"} Credit card number:
@@ -56,7 +56,7 @@
     .form-group
       %label.col-sm-3.control-label Issuer:
       .col-sm-9
-        %select.form-control#issuer(name="issuer")
+        %select.form-control#issuer(name="issuer_id")
     .form-group
       %label.col-sm-3.control-label Installments
       .col-sm-9
@@ -74,13 +74,18 @@
         %input.form-control{:type => "submit", :value => "Pay!", class: "btn btn-warning"}
 
   :javascript
-
     Mercadopago.getIdentificationTypes();
     payForm = new paymentForm(".simple_form");
 
     $(".custom").hide();
 
     $("#card_token").on("change", function(){
+      toggle_card_form();
+    });
+
+    toggle_card_form();
+
+    function toggle_card_form {
       if ($(this).val() == "0"){
         $(".custom").show();
       } else {
@@ -91,6 +96,6 @@
         //addEvent(getInputFromID("issuer"), 'change', payForm.setInstallmentInfoFn());
         $(".custom").hide();
       }
-    });
+    }
 
 

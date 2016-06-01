@@ -1,9 +1,12 @@
-Rails.application.routes.draw do 
-  devise_for :users
+Rails.application.routes.draw do
+  devise_for :users, :controllers => {:registrations => "registrations", :sessions => "sessions"}
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+
+  mount Browserlog::Engine => '/logs'
 
   root 'products#index'
 
@@ -15,7 +18,11 @@ Rails.application.routes.draw do
   namespace :gateway do
     resources :cards do
       collection do
-        get  :payment_form
+        get   :payment_form
+
+      end
+      member do
+        get   :destroy
       end
     end
     resources :sales do

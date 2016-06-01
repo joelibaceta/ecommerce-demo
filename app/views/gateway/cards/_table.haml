@@ -1,10 +1,15 @@
 %table.table.table-bordered
   %thead
     %th
-    %th Last 4 Digits
-    %th
+    %th Expiration
+    %th Last Digits
+    %th CardHolder
   %tbody
     - @cards.each do |card|
       %tr
-        %td= image_tag(card.provider_prefix, width: "50px")
-        %td= "#{card.first6.to_s[0..3]} #{card.first6.to_s[4..5]}** **** #{card.last4}"
+        %td= image_tag(card.payment_method.thumbnail)
+        %td= "#{card.expiration_month}/#{card.expiration_year}"
+        %td= card.last_four_digits
+        %td= card.cardholder.name
+        %td
+          %a.btn.btn-danger.btn-xs{href: gateway_card_path(card.id), "data-method": "delete"} Eliminar
