@@ -26,13 +26,21 @@ class Gateway::SalesController < ApplicationController
         installments: params[:installments],
         payer: MercadoPago::Payer.new({email: current_user.email})
                                         })
-    p "PAYMENT:"
-    p @payment.to_json
-    @payment.save
 
-    if (@payment.status == "approved")
-      self.get_current_cart(current_user).status = "finished"
+    @payment.to_json
+
+    #if (params[:saveCard])
+
+    begin
+      @payment.save
+
+      if (@payment.status == "approved")
+        self.get_current_cart(current_user).status = "finished"
+      end
+    rescue
+      puts "No se pudo guardar"
     end
+
   end
 
 end

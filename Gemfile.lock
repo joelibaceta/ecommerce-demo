@@ -26,6 +26,13 @@ GIT
       ejs
       rails (>= 3.0.0)
 
+GIT
+  remote: git://github.com/joelibaceta/mp-sdk-ruby.git
+  revision: 9beebb21a9236a3a98fb9c3b55ee522164bf46cc
+  specs:
+    mercadopago (2.0.1)
+      activesupport
+
 PATH
   remote: vendor/browserlog
   specs:
@@ -38,12 +45,6 @@ PATH
   specs:
     mango-ruby (0.0.5)
       rest-client (~> 1.7)
-
-PATH
-  remote: vendor/sdk-ruby
-  specs:
-    mercadopago-sdk (0.3.4)
-      json
 
 PATH
   remote: vendor/stripe-ruby
@@ -310,7 +311,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   mango-ruby!
-  mercadopago-sdk (~> 0.3.4)!
+  mercadopago!
   paperclip
   quiet_assets
   rails (= 4.2.6)

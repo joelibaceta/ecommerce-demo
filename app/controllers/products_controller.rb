@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
 
     page = params[:page]
     if page
-      @products = products.page(page).per(7 )
+      @products = products.page(page).per(7)
       render partial: "grid", layout: false
     else
       render :index
